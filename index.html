@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosso Amor ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+      <!-- Título -->
+      <h1 class="title fade-in">Nosso Amor, 3 meses de namoro ❤️</h1>
+
+      <!-- Player de Música -->
+      <div class="music-player">
+        <button id="musicToggle" class="music-button">
+          <span id="playIcon">▶️</span>
+          <span id="pauseIcon" style="display: none;">⏸️</span>
+          🎵
+        </button>
+        <audio id="background-music" loop>
+          <!-- Adicione sua música aqui -->
+          <source src="Goo Goo Dolls - Iris (Lyrics).mp3" type="audio/mp3">
+        </audio>
+      </div>
+
+      <!-- Carrossel de Memórias -->
+      <div class="memory-carousel">
+        <div class="memory-container">
+          <img id="memoryImage" src="Imagem do WhatsApp de 2025-04-15 à(s) 20.03.03_84400ca5.jpg" alt="Memória" class="memory-image">
+          <button class="nav-button prev" onclick="prevMemory()">❮</button>
+          <button class="nav-button next" onclick="nextMemory()">❯</button>
+          <p id="memoryText" class="memory-text">Nosso primeiro encontro...</p>
+        </div>
+      </div>
+
+      <!-- Mensagem de Amor -->
+      <div class="love-message">
+        <p>
+          Cada dia eu te amo mais, você é minha razao de viver, eu vou te amar pra sempre, vamos nos casar e ter filhos, Eu te amo hoje  e todos os dias, cada dia mais. ❤️
+        </p>
+      </div>
+    </div>
+
+    <div id="hearts-container"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

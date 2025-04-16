@@ -73,3 +73,28 @@ const memories = [
   }
   
   setInterval(createHeart, 3000);
+
+  // Suporte para Swipe no celular
+let touchStartX = 0;
+let touchEndX = 0;
+
+const memoryContainer = document.querySelector('.memory-container');
+
+memoryContainer.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+memoryContainer.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleGesture();
+});
+
+function handleGesture() {
+  const threshold = 50; // distância mínima para contar como gesto
+  if (touchEndX < touchStartX - threshold) {
+    nextMemory(); // deslizou para a esquerda
+  }
+  if (touchEndX > touchStartX + threshold) {
+    prevMemory(); // deslizou para a direita
+  }
+}
